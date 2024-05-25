@@ -1,4 +1,4 @@
-module prova.pacman {
+module main.menu {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -6,6 +6,6 @@ module prova.pacman {
     requires net.synedra.validatorfx;
     requires com.almasb.fxgl.all;
 
-    opens prova.pacman to javafx.fxml;
-    exports prova.pacman;
+    opens main.menu to javafx.fxml;
+    exports main.menu;
 }
