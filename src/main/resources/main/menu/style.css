@@ -1,9 +1,3 @@
-
-@font-face {
-    font-family: PacMan;
-    src: url("PAC-FONT.TTF");
-}
-
 .Button{
     -fx-border-color: #FFD700;
     -fx-border-radius: 50%;
@@ -13,5 +7,4 @@
     -fx-background-radius: 50%;
     -fx-padding: 10px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
-    -fx-font-family: PacMan;
 }

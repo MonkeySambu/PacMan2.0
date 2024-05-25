@@ -1,4 +1,4 @@
-module main.menu {
+module main.menu{
     requires javafx.controls;
     requires javafx.fxml;
 
