@@ -9,25 +9,34 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="main" prefHeight="720" prefWidth="1280" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.menu.Controller">
+<AnchorPane id="Avvio.Avvio" prefHeight="720" prefWidth="1280" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Avvio.Avvio">
    <children>
       <ImageView id="Logo" fitHeight="535.0" fitWidth="565.0" layoutX="373.0" layoutY="-120.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@adesivi-pac-man-logo.jpg" />
          </image>
       </ImageView>
-      <Button id="Gioca" layoutX="443.0" layoutY="291.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Gioca">
+      <Button id="Gioca" layoutX="443.0" layoutY="291.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Gioca" onAction="#onGiocaClick">
          <font>
             <Font name="Bauhaus 93" size="40.0" />
-         </font></Button>
-      <Button id="Classifica" layoutX="444.0" layoutY="415.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Classifica">
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="Classifica" layoutX="444.0" layoutY="415.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Classifica" onAction="#onClassificaClick">
          <font>
             <Font name="Bauhaus 93" size="40.0" />
-         </font></Button>
-      <Button id="Crediti" layoutX="443.0" layoutY="533.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Crediti">
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="Crediti" layoutX="443.0" layoutY="533.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Crediti" onAction="#onCreditiClick">
          <font>
             <Font name="Bauhaus 93" size="40.0" />
-         </font></Button>
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Pane layoutX="509.0" layoutY="186.0" prefHeight="55.0" prefWidth="217.0">
          <children>
             <Label prefHeight="55.0" prefWidth="163.0" text="Java Version">
@@ -43,6 +52,6 @@
       </Pane>
    </children>
    <cursor>
-      <Cursor fx:constant="CLOSED_HAND" />
+      <Cursor fx:constant="DEFAULT" />
    </cursor>
 </AnchorPane>

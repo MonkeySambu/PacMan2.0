@@ -1,4 +1,4 @@
-module main.menu{
+module Avvio{
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -6,6 +6,8 @@ module main.menu{
     requires net.synedra.validatorfx;
     requires com.almasb.fxgl.all;
 
-    opens main.menu to javafx.fxml;
-    exports main.menu;
+    opens Avvio to javafx.fxml;
+    exports Avvio;
+    exports Menu;
+    exports Classifica;
 }
