@@ -1,11 +1,8 @@
-module prova.pacman {
+module byCHAT{
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
-    requires org.controlsfx.controls;
-    requires net.synedra.validatorfx;
-    requires com.almasb.fxgl.all;
-
-    opens prova.pacman to javafx.fxml;
-    exports prova.pacman;
+    exports byCHAT to javafx.graphics;
+    opens byCHAT to javafx.fxml;
 }

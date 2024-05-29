@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="byCHAT.GameController">
+   <children>
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="666.0" layoutX="14.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" layoutX="14.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1251.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="671.0" layoutX="1238.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" layoutX="15.0" layoutY="680.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1251.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="100.0" layoutX="508.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="265.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="390.0" layoutY="491.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="39.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="48.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+   </children>
+</AnchorPane>
