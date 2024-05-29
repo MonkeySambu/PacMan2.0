@@ -2,54 +2,44 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="Avvio.Avvio" prefHeight="720" prefWidth="1280" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Avvio.Avvio">
    <children>
-      <ImageView id="Logo" fitHeight="535.0" fitWidth="565.0" layoutX="373.0" layoutY="-120.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="Logo" fitHeight="535.0" fitWidth="565.0" layoutX="359.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@adesivi-pac-man-logo.jpg" />
+            <Image url="@pacman.png" />
          </image>
       </ImageView>
-      <Button id="Gioca" layoutX="443.0" layoutY="291.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Gioca" onAction="#onGiocaClick">
+      <Button id="Gioca" layoutX="443.0" layoutY="291.0" mnemonicParsing="false" onAction="#onGiocaClick" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Gioca">
          <font>
             <Font name="Bauhaus 93" size="40.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button id="Classifica" layoutX="444.0" layoutY="415.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Classifica" onAction="#onClassificaClick">
+      <Button id="Classifica" layoutX="444.0" layoutY="415.0" mnemonicParsing="false" onAction="#onClassificaClick" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Classifica">
          <font>
             <Font name="Bauhaus 93" size="40.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button id="Crediti" layoutX="443.0" layoutY="533.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Crediti" onAction="#onCreditiClick">
+      <Button id="Crediti" layoutX="443.0" layoutY="533.0" mnemonicParsing="false" onAction="#onCreditiClick" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Crediti">
          <font>
             <Font name="Bauhaus 93" size="40.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Pane layoutX="509.0" layoutY="186.0" prefHeight="55.0" prefWidth="217.0">
-         <children>
-            <Label prefHeight="55.0" prefWidth="163.0" text="Java Version">
-               <font>
-                  <Font name="Bauhaus 93" size="30.0" />
-               </font></Label>
-            <ImageView fitHeight="55.0" fitWidth="44.0" layoutX="173.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@coffeecuplogoJava_5406.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
+      <ImageView id="Logo" fitHeight="35.0" fitWidth="310.0" layoutX="553.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@jedition.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
