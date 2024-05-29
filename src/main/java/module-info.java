@@ -1,13 +1,8 @@
 module Avvio{
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
-    requires org.controlsfx.controls;
-    requires net.synedra.validatorfx;
-    requires com.almasb.fxgl.all;
-
+    exports Avvio to javafx.graphics;
     opens Avvio to javafx.fxml;
-    exports Avvio;
-    exports Menu;
-    exports Classifica;
 }
