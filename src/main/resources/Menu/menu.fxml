@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Avvio.Avvio" prefHeight="720" prefWidth="1280" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Avvio.Avvio">
+   <children>
+      <ImageView id="Logo" fitHeight="535.0" fitWidth="565.0" layoutX="359.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pacman.png" />
+         </image>
+      </ImageView>
+      <Button id="Gioca" layoutX="443.0" layoutY="291.0" mnemonicParsing="false" onAction="#onGiocaClick" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Gioca">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="Classifica" layoutX="444.0" layoutY="415.0" mnemonicParsing="false" onAction="#onClassificaClick" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Classifica">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="Crediti" layoutX="443.0" layoutY="533.0" mnemonicParsing="false" onAction="#onCreditiClick" prefHeight="55.0" prefWidth="394.0" styleClass="Button" text="Crediti">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView id="Logo" fitHeight="35.0" fitWidth="310.0" layoutX="553.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@jedition.png" />
+         </image>
+      </ImageView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
