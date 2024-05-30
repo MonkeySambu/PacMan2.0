@@ -22,42 +22,17 @@ public class PacManGame extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
 
-        Pacman pacman = new Pacman(100,70,70,70, Color.YELLOW);
+        GameController controller = loader.getController();
+        Pacman pacman = new Pacman(602, 400, 70, 70, Color.TRANSPARENT);
+        controller.setPacman(pacman);
 
         // Ottenere il riferimento al nodo radice e aggiungere il rettangolo
         Pane pane = (Pane) root;
         pane.getChildren().add(pacman.getImageView());
 
-
-        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                switch (event.getCode()) {
-                    case UP:
-                    case W:
-                        pacman.moveUp();
-
-                        System.out.println("UP");
-                        break;
-                    case DOWN:
-                    case S:
-                        pacman.moveDown();
-
-                        break;
-                    case LEFT:
-                    case A:
-                        pacman.moveLeft();
-
-                        break;
-                    case RIGHT:
-                    case D:
-                        pacman.moveRight();
-
-                        break;
-                }
-            }
-        });
         primaryStage.show();
+
+        scene.getRoot().requestFocus();
     }
 
     public static void main(String[] args) {

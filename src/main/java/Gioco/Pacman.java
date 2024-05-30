@@ -50,41 +50,56 @@ public class Pacman extends Rectangle {
         return imageView;
     }
 
-    public void move() {
-        if (getX() + dx > 0 && getX() + dx < 1280) {
-            setX(getX() + dx);
-        }
-        if (getY() + dy > 15 && getY() + dy < 720) {
-            setY(getY() + dy);
-        }
+    private void move() {
+        double nextX = getX() + dx;
+        double nextY = getY() + dy;
 
+        if (nextX >= 0 && nextX + getWidth() <= 1280 &&
+                nextY >= 0 && nextY + getHeight() <= 720 &&
+                !isColliding(nextX, nextY)) {
+            setX(nextX);
+            setY(nextY);
+        }
         // Update the position of the imageView to match the rectangle
         imageView.setX(getX());
         imageView.setY(getY());
     }
 
+    private boolean isColliding(double nextX, double nextY) {
+        for (Rectangle obstacle : GameController.ostacoli) {
+            if (nextX < obstacle.getX() + obstacle.getWidth() &&
+                    nextX + getWidth() > obstacle.getX() &&
+                    nextY < obstacle.getY() + obstacle.getHeight() &&
+                    nextY + getHeight() > obstacle.getY()) {
+                System.out.println("Colliding con " + obstacle);
+                return true;
+            }
+        }
+        System.out.println("Not colliding");
+        return false;
+    }
+
     public void moveUp() {
-        dy = -1;
+        dy = -3;
         dx = 0;
         imageView.setRotate(90); // Rotate up
     }
 
     public void moveDown() {
-        dy = 1;
+        dy = 3;
         dx = 0;
         imageView.setRotate(270); // Rotate down
     }
 
     public void moveLeft() {
-        dx = -1;
+        dx = -3;
         dy = 0;
         imageView.setRotate(0); // Rotate left
     }
 
     public void moveRight() {
-        dx = 1;
+        dx = 3;
         dy = 0;
         imageView.setRotate(180); // Rotate right
     }
-
 }

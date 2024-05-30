@@ -59,20 +59,9 @@ public class Ghost extends Application {
         parete2.setY(HEIGHT / 2 - 50);
         pane.getChildren().add(parete2);
 
-        // Creare thread per muovere i rettangoli
-        for (Rectangle rectangle : rectangles) {
-            Thread thread = new Thread(() -> moveRectangle(rectangle));
-            thread.setDaemon(true); // Per terminare i thread quando l'applicazione si chiude
-            thread.start();
-        }
+
         primaryStage.setScene(scene);
         primaryStage.setTitle("Random Movement of Rectangles");
         primaryStage.show();
     }
-
-    private void moveRectangle(Rectangle rectangle) {
-    }
-
-    //metodo moveRectangle schivando le pareti  andando verso il punto controllando su tutti i lati con degli altri metodi
-
 }
