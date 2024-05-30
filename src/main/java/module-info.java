@@ -5,11 +5,10 @@ module Avvio{
     requires com.almasb.fxgl.core;
 
     exports Avvio to javafx.graphics;
-
     exports Gioco to javafx.graphics;
-    exports Menu to javafx.fxml;
-    exports Classifica to javafx.fxml;
-    exports Crediti to javafx.fxml;
+    exports Menu to javafx.graphics;
+    exports Classifica to javafx.graphics;
+    exports Crediti to javafx.graphics;
 
     opens Avvio to javafx.fxml;
     opens Gioco to javafx.fxml;
