@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<AnchorPane fx:id="pane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gioco.GameController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gioco.GameController">
    <children>
        <Rectangle fx:id="bho" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="75.0" x="602.0" y="400.0" />
        <Rectangle fx:id="ostacolo2" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="666.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="14.0" y="34.0" />
@@ -25,5 +25,63 @@
       <Rectangle fx:id="ostacolo17" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="202.0" x="756.0" y="37.0" />
       <Rectangle fx:id="ostacolo18" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="116.0" y="115.0" />
       <Rectangle fx:id="ostacolo19" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="363.0" y="402.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="423.0" layoutY="399.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="75.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="666.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="14.0" y="34.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" layoutX="14.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1251.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="671.0" layoutX="1238.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" layoutX="15.0" layoutY="679.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1251.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#221f57" height="100.0" layoutX="506.0" layoutY="295.0" smooth="false" stroke="BLACK" strokeLineCap="ROUND" strokeWidth="0.0" width="265.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="371.0" layoutY="477.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="519.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="116.0" layoutY="114.0" stroke="#ffd100" strokeWidth="0.0" width="565.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="40.0" layoutY="579.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="1050.0" layoutY="202.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="195.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="1013.0" layoutY="579.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="226.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="898.0" layoutY="286.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="243.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="87.0" layoutX="1034.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="877.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="184.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="1135.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" layoutX="655.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="243.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="95.0" layoutX="655.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="68.0" layoutX="756.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="202.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="116.0" y="115.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="102.0" layoutX="363.0" layoutY="402.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+      <Circle centerX="76.0" centerY="305.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="355.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="405.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="455.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="505.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="255.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="205.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="155.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="105.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="60.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="126.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="176.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="226.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="276.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="326.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="376.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="426.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="476.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="526.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="576.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="626.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="676.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="726.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="776.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="826.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="876.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="926.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="976.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="1026.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="1076.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="1126.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="1176.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle centerX="1220.0" centerY="555.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle centerX="76.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+
+
+
    </children>
 </AnchorPane>
