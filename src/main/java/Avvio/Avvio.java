@@ -1,6 +1,7 @@
 package Avvio;
 
 import Classifica.GraficaClassifica;
+import Crediti.GraficaCrediti;
 import Gioco.PacManGame;
 import Menu.GraficaMenu;
 import javafx.application.Application;
@@ -13,6 +14,7 @@ public class Avvio extends Application{
     static GraficaMenu menu;
     static GraficaClassifica classifica;
     static PacManGame gioco;
+    static GraficaCrediti crediti;
 
     public static void main(String[] args) throws Exception {
         launch();
@@ -37,7 +39,10 @@ public class Avvio extends Application{
         menu.close();
     }
 
-    public void onCreditiClick(){
-
+    public void onCreditiClick() throws IOException {
+        System.out.println("Crediti");
+        crediti = new GraficaCrediti();
+        crediti.start(new Stage());
+        menu.close();
     }
 }
