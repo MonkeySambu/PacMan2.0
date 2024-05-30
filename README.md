@@ -3,8 +3,6 @@
 
 Un Remake di "Pacman" in java come progetto scolastico
 
-
-
 ## Authors
 
 - [@Sambu](https://github.com/Sambu)
