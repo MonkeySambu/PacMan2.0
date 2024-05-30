@@ -1,67 +1,97 @@
 package Gioco;
 
-import com.almasb.fxgl.core.collection.grid.Cell;
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
+import javafx.animation.AnimationTimer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
-import javafx.scene.control.ColorPicker;
 
-import java.util.Random;
+import java.util.List;
 
-public class Ghost extends Application {
+public class Ghost extends Rectangle {
+    private double dx;
+    private double dy;
+    private List<Rectangle> ostacoli;
+    public static boolean firstMove = false;
 
-    private static Rectangle punto;
-    private static Rectangle parete;
-    private static Rectangle parete2;
+    public Ghost(int x, int y, int width, int height, Color color, List<Rectangle> ostacoli) {
+        super(width, height, color);
+        setX(x);
+        setY(y);
+        dx = 0;
+        dy = 0;
+        this.ostacoli = ostacoli;
 
-    private static final int WIDTH = 1280;
-    private static final int HEIGHT = 720;
-    private static final int RECT_SIZE = 75;
-
-    public static void main(String[] args) {
-        launch(args);
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                move();
+            }
+        }.start();
     }
 
-    @Override
-    public void start(Stage primaryStage) {
-        Pane pane = new Pane();
-        Scene scene = new Scene(pane, WIDTH, HEIGHT);
+    void move() {
+        if (dx == 0 && dy == 0) {
+            if (firstMove) {
+                int random = (int) (Math.random() * 4);
+                switch (random) {
+                    case 0:
+                        dx = 2;
+                        dy = 0;
+                        break;
+                    case 1:
+                        dx = -2;
+                        dy = 0;
+                        break;
+                    case 2:
+                        dx = 0;
+                        dy = 2;
+                        break;
+                    case 3:
+                        dx = 0;
+                        dy = -2;
+                        break;
+            }
+            }
+        }else {
+            double nextX = getX() + dx;
+            double nextY = getY() + dy;
 
-        // Creare quattro rettangoli
-        Rectangle[] rectangles = new Rectangle[4];
-        for (int i = 0; i < rectangles.length; i++) {
-            rectangles[i] = new Rectangle(RECT_SIZE, RECT_SIZE,
-                    Color.color(Math.random(), Math.random(), Math.random()));
-            rectangles[i].setX(Math.random() * (WIDTH - RECT_SIZE));
-            rectangles[i].setY(Math.random() * (HEIGHT - RECT_SIZE));
-            pane.getChildren().add(rectangles[i]);
+            if (nextX >= 0 && nextX + getWidth() <= 1280 &&
+                    nextY >= 0 && nextY + getHeight() <= 720 &&
+                    !isColliding(nextX, nextY)) {
+                setX(nextX);
+                setY(nextY);
+            } else {
+                dx = 0;
+                dy = 0;
+            }
         }
+    }
 
-        //faccio un punto 10px 10px generato casualmente nella mappa
-        punto = new Rectangle(10, 10, Color.RED);
-        punto.setX(Math.random() * (WIDTH - 10));
-        punto.setY(Math.random() * (HEIGHT - 10));
-        pane.getChildren().add(punto);
+    private boolean isColliding(double nextX, double nextY) {
+        for (Rectangle ostacolo : ostacoli) {
+            if (nextX < ostacolo.getX() + ostacolo.getWidth() &&
+                    nextX + getWidth() > ostacolo.getX() &&
+                    nextY < ostacolo.getY() + ostacolo.getHeight() &&
+                    nextY + getHeight() > ostacolo.getY()) {
+                System.out.println("Colliding");
+                return true;
+            }
+        }
+        System.out.println("Not colliding");
+        return false;
+    }
 
-        //creo una parete 100 x 20 verticale al centro dello schermo viola
-        parete = new Rectangle(100, 20, Color.PURPLE);
-        parete.setX(WIDTH / 2 - 50);
-        parete.setY(HEIGHT / 2 - 10);
-        pane.getChildren().add(parete);
+    public int getDx() {
+        return (int) dx;
+    }
 
-        //ne creo un altro
-        parete2 = new Rectangle(20, 100, Color.PURPLE);
-        parete2.setX(WIDTH / 2 - 10);
-        parete2.setY(HEIGHT / 2 - 50);
-        pane.getChildren().add(parete2);
+    public int getDy()
+    {
+        return (int) dy;
+    }
 
-
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Random Movement of Rectangles");
-        primaryStage.show();
+    public void stop() {
+        dx = 0;
+        dy = 0;
     }
 }

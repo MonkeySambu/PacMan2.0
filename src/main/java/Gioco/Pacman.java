@@ -1,13 +1,11 @@
 package Gioco;
 
 import javafx.animation.AnimationTimer;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.image.Image;
 import javafx.scene.transform.Rotate;
-
 
 public class Pacman extends Rectangle {
     private double dx;
@@ -22,14 +20,12 @@ public class Pacman extends Rectangle {
         dx = 0;
         dy = 0;
 
-
         Image pacmanImage = new Image(getClass().getResourceAsStream("pacman.png"));
         imageView = new ImageView(pacmanImage);
         imageView.setFitWidth(width);
         imageView.setFitHeight(height);
 
         rotation = new Rotate();
-        // Set the pivot points to the center of the rectangle
         rotation.setPivotX(width / 2.0);
         rotation.setPivotY(height / 2.0);
         this.getTransforms().add(rotation);
@@ -60,7 +56,6 @@ public class Pacman extends Rectangle {
             setX(nextX);
             setY(nextY);
         }
-        // Update the position of the imageView to match the rectangle
         imageView.setX(getX());
         imageView.setY(getY());
     }
@@ -75,6 +70,17 @@ public class Pacman extends Rectangle {
                 return true;
             }
         }
+        //se collido in ogni direzione con un fantasma perdo
+        for (Ghost ghost : GameController.fantasmi) {
+            if (nextX < ghost.getX() + ghost.getWidth() &&
+                    nextX + getWidth() > ghost.getX() &&
+                    nextY < ghost.getY() + ghost.getHeight() &&
+                    nextY + getHeight() > ghost.getY()) {
+                System.out.println("Colliding con " + ghost);
+                System.out.println("Hai perso");
+                System.exit(0);
+            }
+        }
         System.out.println("Not colliding");
         return false;
     }
@@ -82,24 +88,24 @@ public class Pacman extends Rectangle {
     public void moveUp() {
         dy = -3;
         dx = 0;
-        imageView.setRotate(90); // Rotate up
+        imageView.setRotate(90);
     }
 
     public void moveDown() {
         dy = 3;
         dx = 0;
-        imageView.setRotate(270); // Rotate down
+        imageView.setRotate(270);
     }
 
     public void moveLeft() {
         dx = -3;
         dy = 0;
-        imageView.setRotate(0); // Rotate left
+        imageView.setRotate(0);
     }
 
     public void moveRight() {
         dx = 3;
         dy = 0;
-        imageView.setRotate(180); // Rotate right
+        imageView.setRotate(180);
     }
 }
