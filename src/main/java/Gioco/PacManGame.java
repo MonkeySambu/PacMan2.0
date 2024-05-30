@@ -17,7 +17,7 @@ public class PacManGame extends Application {
         FXMLLoader loader = new FXMLLoader(PacManGame.class.getResource("campo.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root, 1280, 720);
-        //scene.getStylesheets().add(getClass().getResource("/byCHAT/style.css").toExternalForm());
+        //scene.getStylesheets().add(getClass().getResource("/Gioco/style.css").toExternalForm());
         primaryStage.setTitle("Pac-Man");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -26,7 +26,8 @@ public class PacManGame extends Application {
 
         // Ottenere il riferimento al nodo radice e aggiungere il rettangolo
         Pane pane = (Pane) root;
-        pane.getChildren().add(pacman);
+        pane.getChildren().add(pacman.getImageView());
+
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
@@ -35,23 +36,27 @@ public class PacManGame extends Application {
                     case UP:
                     case W:
                         pacman.moveUp();
+
+                        System.out.println("UP");
                         break;
                     case DOWN:
                     case S:
                         pacman.moveDown();
+
                         break;
                     case LEFT:
                     case A:
                         pacman.moveLeft();
+
                         break;
                     case RIGHT:
                     case D:
                         pacman.moveRight();
+
                         break;
                 }
             }
         });
-
         primaryStage.show();
     }
 

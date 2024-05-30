@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Avvio.Avvio"
-            prefHeight="720" prefWidth="1280">
-
+<AnchorPane prefHeight="720" prefWidth="342.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Avvio.Avvio">
+   <children>
+      <Text fill="WHITE" layoutX="85.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classifica" textAlignment="CENTER">
+         <font>
+             <Font name="Bauhaus 93" size="40.0" />
+         </font></Text>
+   </children>
 </AnchorPane>

@@ -70,6 +70,9 @@ public class Ghost extends Application {
         primaryStage.show();
     }
 
+    private void moveRectangle(Rectangle rectangle) {
+    }
+
     //metodo moveRectangle schivando le pareti  andando verso il punto controllando su tutti i lati con degli altri metodi
 
 }
