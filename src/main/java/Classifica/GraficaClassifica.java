@@ -14,6 +14,7 @@ public class GraficaClassifica extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setTitle("Pac-Man Java Edition -- Classifica");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }

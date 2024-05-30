@@ -16,6 +16,7 @@ public class GraficaMenu extends Application {
         stage.setTitle("Pac-Man Java Edition");
         stage.setScene(scene);
         stageTMP = stage;
+        stage.setResizable(false);
         stage.show();
     }
 
