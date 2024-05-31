@@ -433,7 +433,6 @@ public class GameController {
 
         for (Ghost ghost : fantasmi) {
             pane.getChildren().add(ghost.getImageView());
-
         }
 
         pane.setOnKeyPressed(this::handleKeyPress);
@@ -468,21 +467,25 @@ public class GameController {
     private void handleKeyPress(KeyEvent event) {
         switch (event.getCode()) {
             case UP:
+            case W:
                 pacman.moveUp();
                 //System.out.println("UP");
                 Ghost.firstMove = true;
                 break;
             case DOWN:
+            case S:
                 pacman.moveDown();
                 //System.out.println("DOWN");
                 Ghost.firstMove = true;
                 break;
             case LEFT:
+            case A:
                 pacman.moveLeft();
                 //System.out.println("LEFT");
                 Ghost.firstMove = true;
                 break;
             case RIGHT:
+            case D:
                 pacman.moveRight();
                 //System.out.println("RIGHT");
                 Ghost.firstMove = true;

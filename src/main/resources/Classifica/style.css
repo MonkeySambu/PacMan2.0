@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'PixelGame';
-    src: url('../Gioco/PixelGameFont.ttf');
+    src: url('PixelGameFont.ttf');
 }
+
 
 .Label{
     -fx-font-size: 50px;
     -fx-font-weight: bold;
-    -fx-font-family: 'PixelGame';
     -fx-text-fill: #FFD700;
     -fx-padding: 10px;
     -ft-border-color: #FFD700;
