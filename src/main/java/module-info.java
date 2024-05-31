@@ -4,6 +4,7 @@ module Avvio{
     requires javafx.graphics;
     requires com.almasb.fxgl.core;
     requires jdk.xml.dom;
+    requires javafx.media;
 
     exports Avvio to javafx.graphics;
     exports Gioco to javafx.graphics;

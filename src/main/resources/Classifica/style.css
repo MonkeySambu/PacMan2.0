@@ -1,0 +1,7 @@
+.Label{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFD700;
+    -fx-padding: 10px;
+    -ft-border-color: #FFD700;
+}
