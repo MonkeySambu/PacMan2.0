@@ -7,6 +7,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
 
 import java.security.cert.PolicyNode;
 import java.util.ArrayList;
@@ -227,6 +229,8 @@ public class GameController {
     @FXML  private Circle punto140;
     @FXML  private Circle punto141;
 
+    private Font customFont;
+
     public static List<Rectangle> ostacoli = new ArrayList<>();
     public static Pacman pacman;
     private List<Rectangle> ostacoliGhost = new ArrayList<>();
@@ -401,15 +405,17 @@ public class GameController {
         monete.add(punto140);
         monete.add(punto141);
 
-        ghost1 = new Ghost(614, 230, 50, 50, javafx.scene.paint.Color.RED, ostacoliGhost);
-        ghost2 = new Ghost(616, 320, 50, 50, Color.PINK, ostacoliGhost);
-        ghost3 = new Ghost(535, 320, 50, 50, javafx.scene.paint.Color.GREEN, ostacoliGhost);
-        ghost4 = new Ghost(686, 320, 50, 50, Color.ORANGE, ostacoliGhost);
+        ghost1 = new Ghost(614, 230, 50, 50, Color.TRANSPARENT, ostacoliGhost,"red.png");
+        ghost2 = new Ghost(616, 320, 50, 50, Color.TRANSPARENT, ostacoliGhost,"pink.png");
+        ghost3 = new Ghost(535, 320, 50, 50, Color.TRANSPARENT, ostacoliGhost,"lime.png");
+        ghost4 = new Ghost(686, 320, 50, 50, Color.TRANSPARENT, ostacoliGhost,"orange.png");
 
         fantasmi.add(ghost1);
         fantasmi.add(ghost2);
         fantasmi.add(ghost3);
         fantasmi.add(ghost4);
+
+        customFont = Font.loadFont(getClass().getResourceAsStream("PixelGameFont.ttf"), 30);
 
         //stampo tutte le info della lista monete
         for (Circle moneta : monete) {
@@ -417,7 +423,8 @@ public class GameController {
         }
 
         for (Ghost ghost : fantasmi) {
-            pane.getChildren().add(ghost);
+            pane.getChildren().add(ghost.getImageView());
+
         }
 
         pane.setOnKeyPressed(this::handleKeyPress);
@@ -426,9 +433,11 @@ public class GameController {
         new javafx.animation.AnimationTimer() {
             @Override
             public void handle(long now) {
-                punteggio.setScore(((141 - monete.size())*10)-10);
+                punteggio.setScore(((141 - monete.size()-1)*10));
                 //Aggiorno il label
                 System.out.println(punteggio.getScore());
+                score.setFont(customFont);
+                score.setTextAlignment(TextAlignment.CENTER);
                 score.setText(punteggio.getScore());
             }
         }.start();
