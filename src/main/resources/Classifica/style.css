@@ -1,7 +1,16 @@
 .Label{
-    -fx-font-size: 20px;
+    -fx-font-size: 50px;
     -fx-font-weight: bold;
+    -fx-font-family: PixelGameFont;
     -fx-text-fill: #FFD700;
     -fx-padding: 10px;
     -ft-border-color: #FFD700;
+}
+
+.Button{
+    -fx-background-image: url('home-icon.png');
+    -fx-background-size: 100px 100px;
+    -fx-background-repeat: no-repeat;
+
+    -fx-background-color: #000000;
 }
