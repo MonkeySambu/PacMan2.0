@@ -3,13 +3,13 @@ package Gioco;
 import java.io.Serializable;
 
 public class Punteggio implements Serializable {
-    private int punteggio;
+    private String punteggio;
 
     public Punteggio() {
-        punteggio = 0;
+        punteggio = "0";
     }
 
-    public void setScore(int punteggio) {
+    public void setScore(String punteggio) {
         this.punteggio = punteggio;
     }
 

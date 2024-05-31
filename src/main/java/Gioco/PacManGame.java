@@ -1,6 +1,7 @@
 package Gioco;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +13,10 @@ import javafx.stage.Stage;
 
 public class PacManGame extends Application {
 
+    private static boolean win=false;
+    private static boolean gameOver=false;
+    static Stage stageTMP;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(PacManGame.class.getResource("campo.fxml"));
@@ -20,6 +25,7 @@ public class PacManGame extends Application {
         //scene.getStylesheets().add(getClass().getResource("/Gioco/style.css").toExternalForm());
         primaryStage.setTitle("Pac-Man");
         primaryStage.setScene(scene);
+        stageTMP = primaryStage;
         primaryStage.setResizable(false);
 
         GameController controller = loader.getController();
@@ -35,7 +41,64 @@ public class PacManGame extends Application {
         scene.getRoot().requestFocus();
     }
 
+    public static void GameOverScene() {
+        if(!gameOver) {
+            System.out.println("Hai perso!");
+            FXMLLoader loader = new FXMLLoader(PacManGame.class.getResource("gameover.fxml"));
+            try {
+                Parent root = loader.load();
+                Scene scene = new Scene(root, 610, 390);
+                Stage stage = new Stage();
+                stage.setTitle("Hai perso!");
+                stage.setScene(scene);
+                stage.setResizable(false);
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            gameOver = true;
+            stageTMP.hide();
+        }
+    }
+
+    public static void WinScene(){
+        if(!win) {
+            System.out.println("Hai vinto!");
+            FXMLLoader loader = new FXMLLoader(PacManGame.class.getResource("win.fxml"));
+            try {
+                Parent root = loader.load();
+                Scene scene = new Scene(root, 1280, 720);
+                Stage stage = new Stage();
+                stage.setTitle("Hai vinto!");
+                stage.setScene(scene);
+                stage.setResizable(false);
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            win=true;
+            stageTMP.hide();
+        }
+    }
+
     public static void main(String[] args) {
         launch();
+    }
+
+    public void close() {
+        stageTMP.close();
+    }
+
+    public void restartGame() {
+        stageTMP.close(); // Chiudi la finestra corrente
+
+        // Avvia una nuova istanza dell'applicazione
+        Platform.runLater(() -> {
+            try {
+                start(new Stage());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 }

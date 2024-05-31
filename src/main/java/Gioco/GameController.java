@@ -232,7 +232,15 @@ public class GameController {
     private List<Rectangle> ostacoliGhost = new ArrayList<>();
     public static List<Circle> monete = new ArrayList<>();
 
-    public Punteggio punteggio = new Punteggio();
+    public static Punteggio punteggio = new Punteggio();
+
+    public static void stopThreads() {
+        for (Ghost ghost : fantasmi) {
+            ghost.stop();
+        }
+        pacman.stop();
+    }
+
 
     @FXML
     public void initialize() {
@@ -413,7 +421,7 @@ public class GameController {
 
         //stampo tutte le info della lista monete
         for (Circle moneta : monete) {
-            System.out.println(moneta);
+            //System.out.println(moneta);
         }
 
         for (Ghost ghost : fantasmi) {
@@ -426,10 +434,12 @@ public class GameController {
         new javafx.animation.AnimationTimer() {
             @Override
             public void handle(long now) {
-                punteggio.setScore(((141 - monete.size())*10)-10);
-                //Aggiorno il label
-                System.out.println(punteggio.getScore());
-                score.setText(punteggio.getScore());
+                //faccio si che il pubnteggio sia composto da 4 cifre
+                score.setText("Score: " + String.format("%04d", (140-monete.size())*10));
+                punteggio.setScore(String.format("%04d", (140-monete.size())*10));
+                if (monete.isEmpty()) {
+                    PacManGame.WinScene();
+                }
             }
         }.start();
 

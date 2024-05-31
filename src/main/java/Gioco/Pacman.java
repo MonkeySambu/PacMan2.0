@@ -100,4 +100,9 @@ public class Pacman extends Rectangle {
         dy = 0;
         imageView.setRotate(180);
     }
+
+    public void stop() {
+        dx = 0;
+        dy = 0;
+    }
 }

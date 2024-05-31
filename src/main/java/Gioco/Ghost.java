@@ -109,7 +109,7 @@ public class Ghost extends Rectangle {
     }
 
     public void GameOver() {
-        System.exit(0);
+        PacManGame.GameOverScene();
     }
 
     public int getDx() {

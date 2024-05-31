@@ -175,7 +175,7 @@
     <Circle fx:id="punto139" centerX="200.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
     <Circle fx:id="punto140" centerX="200.0" centerY="500.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
     <Circle fx:id="punto141" centerX="400.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-   <Label fx:id="score" layoutX="763.0" layoutY="29.0" prefHeight="70.0" prefWidth="190.0" text="Score: 9999" textAlignment="CENTER" textFill="WHITE">
+   <Label fx:id="score" layoutX="774.0" layoutY="35.0" prefHeight="70.0" prefWidth="190.0" text="Score: 9999" textAlignment="CENTER" textFill="WHITE">
       <font>
          <Font name="Bauhaus 93" size="30.0" />
       </font>
