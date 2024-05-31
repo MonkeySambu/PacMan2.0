@@ -3,267 +3,184 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<AnchorPane fx:id="pane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;"
-            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Gioco.GameController">
-    <Rectangle fx:id="ostacolo1" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="184.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="240.0" y="240.0"/>
-    <Rectangle fx:id="ostacolo2" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="666.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="14.0" y="34.0"/>
-    <Rectangle fx:id="ostacolo3" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="1251.0" x="14.0" y="19.0"/>
-    <Rectangle fx:id="ostacolo4" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="671.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="1240.0" y="19.0"/>
-    <Rectangle fx:id="ostacolo5" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="1252.0" x="15.0" y="679.0"/>
-    <Rectangle fx:id="ostacoloOnlyPacMan" arcHeight="5.0" arcWidth="5.0" fill="#221f57" height="100.0" smooth="false"
-               stroke="BLACK" strokeLineCap="ROUND" strokeWidth="0.0" width="265.0" x="506.0" y="295.0"/>
-    <Rectangle fx:id="ostacolo7" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="519.0" x="371.0" y="477.0"/>
-    <Rectangle fx:id="ostacolo6" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="#000000"
-               strokeWidth="0.0" width="565.0" x="116.0" y="114.0"/>
-    <Rectangle fx:id="ostacolo8" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="202.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="20.0" x="1140.0" y="115.0"/>
-    <Rectangle fx:id="ostacolo9" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="395.0" x="40.0" y="579.0"/>
-    <Rectangle fx:id="ostacolo10" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" smooth="false"
-               stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="230.0" x="1013.0" y="579.0"/>
-    <Rectangle fx:id="ostacolo11" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="243.0" x="902.0" y="290.0"/>
-    <Rectangle fx:id="ostacolo12" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="87.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="1030.0" y="117.0"/>
-    <Rectangle fx:id="ostacolo13" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="167.0" x="890.0" y="184.0"/>
-    <Rectangle fx:id="ostacolo14" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1141.0" y="114.0"/>
-    <Rectangle fx:id="ostacolo15" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="243.0" x="655.0" y="184.0"/>
-    <Rectangle fx:id="ostacolo16" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="95.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="655.0" y="114.0"/>
-    <Rectangle fx:id="ostacolo17" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="69.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="202.0" x="756.0" y="37.0"/>
-    <Rectangle fx:id="ostacolo18" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="380.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="116.0" y="115.0"/>
-    <Rectangle fx:id="ostacolo19" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="102.0" stroke="BLACK"
-               strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="363.0" y="402.0"/>
-    <Circle fx:id="punto0" centerX="76.0" centerY="305.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle fx:id="punto1" centerX="76.0" centerY="355.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="76.0" centerY="405.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="76.0" centerY="455.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="76.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="76.0" centerY="255.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="76.0" centerY="205.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="76.0" centerY="155.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="76.0" centerY="105.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="126.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="176.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="226.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="276.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="326.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="376.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="426.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="476.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="526.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="576.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="626.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="676.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="726.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="776.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="826.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="876.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="926.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="976.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1026.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1076.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1126.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1205.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
+<AnchorPane fx:id="pane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gioco.GameController">
+   <children>
+      <!-- Muri-->
+       <Rectangle fx:id="ostacolo1" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="184.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="240.0" y="240.0" />
+       <Rectangle fx:id="ostacolo2" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="666.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="14.0" y="34.0" />
+       <Rectangle fx:id="ostacolo3" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1251.0" x="14.0" y="19.0" />
+       <Rectangle fx:id="ostacolo4" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="671.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="1240.0" y="19.0" />
+       <Rectangle fx:id="ostacolo5" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1252.0" x="15.0" y="679.0" />
+       <Rectangle fx:id="ostacoloOnlyPacMan" arcHeight="5.0" arcWidth="5.0" fill="#221f57" height="100.0" smooth="false" stroke="BLACK" strokeLineCap="ROUND" strokeWidth="0.0" width="265.0" x="506.0" y="295.0" />
+       <Rectangle fx:id="ostacolo7" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="519.0" x="371.0" y="477.0" />
+       <Rectangle fx:id="ostacolo6" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK" strokeWidth="0.0" width="565.0" x="116.0" y="114.0" />
+       <Rectangle fx:id="ostacolo8" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="202.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" x="1140.0" y="115.0" />
+       <Rectangle fx:id="ostacolo9" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="395.0" x="40.0" y="579.0" />
+      <Rectangle fx:id="ostacolo10" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="230.0" x="1013.0" y="579.0" />
+      <Rectangle fx:id="ostacolo11" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="243.0" x="902.0" y="290.0" />
+      <Rectangle fx:id="ostacolo12" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="87.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="1030.0" y="117.0" />
+      <Rectangle fx:id="ostacolo13" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="167.0" x="890.0" y="184.0" />
+      <Rectangle fx:id="ostacolo14" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1141.0" y="114.0" />
+      <Rectangle fx:id="ostacolo15" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="243.0" x="655.0" y="184.0" />
+      <Rectangle fx:id="ostacolo16" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="95.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="655.0" y="114.0" />
+      <Rectangle fx:id="ostacolo17" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="202.0" x="756.0" y="37.0" />
+      <Rectangle fx:id="ostacolo18" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="116.0" y="115.0" />
+      <Rectangle fx:id="ostacolo19" arcHeight="5.0" arcWidth="5.0" fill="#4338ca" height="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="27.0" x="363.0" y="402.0" />
+      <!-- Punteggio -->
+      <Circle fx:id="punto1" centerX="76.0" centerY="305.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto2" centerX="76.0" centerY="355.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto3" centerX="76.0" centerY="405.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto4" centerX="76.0" centerY="455.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto5" centerX="76.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto6" centerX="76.0" centerY="255.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto7" centerX="76.0" centerY="205.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto8" centerX="76.0" centerY="155.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto9" centerX="76.0" centerY="105.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto10" centerX="126.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto11" centerX="176.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto12" centerX="226.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto13" centerX="276.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto14" centerX="326.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto15" centerX="376.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto16" centerX="426.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto17" centerX="476.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto18" centerX="526.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto19" centerX="576.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto20" centerX="626.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto21" centerX="676.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto22" centerX="726.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto23" centerX="776.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto24" centerX="826.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto25" centerX="876.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto26" centerX="926.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto27" centerX="976.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto28" centerX="1026.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto29" centerX="1076.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto30" centerX="1126.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto31" centerX="1205.0" centerY="545.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
 
-    <Circle centerX="76.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="126.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="176.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="226.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="276.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="326.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="376.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="426.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="476.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="526.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="576.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="626.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="676.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="726.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="776.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="826.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="876.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="926.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="976.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1026.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1076.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1126.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1176.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1220.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
+      <Circle fx:id="punto32" centerX="76.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto33" centerX="126.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto34" centerX="176.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto35" centerX="226.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto36" centerX="276.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto37" centerX="326.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto38" centerX="376.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto39" centerX="426.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto40" centerX="476.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto41" centerX="526.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto42" centerX="576.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto43" centerX="626.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto44" centerX="676.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto45" centerX="726.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto46" centerX="776.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto47" centerX="826.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto48" centerX="876.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto49" centerX="926.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto50" centerX="976.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto51" centerX="1026.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto52" centerX="1076.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto53" centerX="1126.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto54" centerX="1176.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto55" centerX="1220.0" centerY="645.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
 
-    <Circle centerX="76.0" centerY="500.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
+      <Circle fx:id="punto56" centerX="76.0" centerY="500.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
 
-    <Circle centerX="475.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="525.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="575.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="625.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="675.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="725.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="775.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="825.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="875.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="925.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="975.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1205.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
+      <Circle fx:id="punto57" centerX="475.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto58" centerX="525.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto59" centerX="575.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto60" centerX="625.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto61" centerX="675.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto62" centerX="725.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto63" centerX="775.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto64" centerX="825.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto65" centerX="875.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto66" centerX="925.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto67" centerX="975.0" centerY="595.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto68" centerX="1205.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
 
-    <Circle centerX="1205.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1205.0" centerY="300.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1205.0" centerY="350.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1205.0" centerY="400.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1205.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1205.0" centerY="500.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1160.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1110.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1060.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1010.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="960.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="910.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="860.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="810.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="760.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="510.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="460.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="410.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="130.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="180.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="230.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="280.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="330.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="380.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="430.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="480.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="530.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="580.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="630.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="680.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="726.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
+       <Circle fx:id="punto69" centerX="1205.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto70" centerX="1205.0" centerY="300.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto71" centerX="1205.0" centerY="350.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto72" centerX="1205.0" centerY="400.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto73" centerX="1205.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto74" centerX="1205.0" centerY="500.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto75" centerX="1160.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto76" centerX="1110.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto77" centerX="1060.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto78" centerX="1010.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto79" centerX="960.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto80" centerX="910.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto81" centerX="860.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto82" centerX="810.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto83" centerX="760.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto84" centerX="510.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto85" centerX="460.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto86" centerX="415.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto87" centerX="130.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto88" centerX="180.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto89" centerX="230.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto90" centerX="280.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto91" centerX="330.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto92" centerX="380.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto93" centerX="430.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto94" centerX="480.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto95" centerX="530.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto96" centerX="580.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto97" centerX="630.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto98" centerX="680.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto99" centerX="726.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
 
-    <Circle centerX="726.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="776.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="826.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="876.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="926.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
-    <Circle centerX="1000.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
+      <Circle fx:id="punto100" centerX="726.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto101" centerX="776.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto102" centerX="826.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto103" centerX="876.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto104" centerX="926.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto105" centerX="1000.0" centerY="150.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
 
-    <Circle centerX="1000.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE"
-            strokeWidth="0.0"/>
+      <Circle fx:id="punto106" centerX="1000.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto107" centerX="1050.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto108" centerX="1100.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto109" centerX="1150.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+    <Circle fx:id="punto110" centerX="1200.0" centerY="80.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto111" centerX="1100.0" centerY="135.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto112" centerX="1100.0" centerY="135.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto113" centerX="1100.0" centerY="185.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto114" centerX="1100.0" centerY="235.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+
+        <Circle fx:id="punto115" centerX="1050.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto116" centerX="1000.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto117" centerX="950.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto118" centerX="900.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto119" centerX="850.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto120" centerX="800.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto121" centerX="415.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto123" centerX="600.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto124" centerX="415.0" centerY="300.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto125" centerX="415.0" centerY="350.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fx:id="punto126" centerX="415.0" centerY="400.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto127" centerX="550.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto128" centerX="500.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+         <Circle fx:id="punto129" centerX="450.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto130" centerX="350.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto131" centerX="300.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto132" centerX="250.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto133" centerX="200.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+       <Circle fx:id="punto134" centerX="250.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+         <Circle fx:id="punto135" centerX="200.0" centerY="250.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto136" centerX="200.0" centerY="300.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto137" centerX="200.0" centerY="350.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto138" centerX="200.0" centerY="400.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto139" centerX="200.0" centerY="450.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="punto140" centerX="200.0" centerY="500.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="punto1301" centerX="400.0" centerY="200.0" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
 
 
+
+
+
+
+
+
+   </children>
 </AnchorPane>
