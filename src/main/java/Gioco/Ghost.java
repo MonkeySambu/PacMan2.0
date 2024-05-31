@@ -11,6 +11,7 @@ public class Ghost extends Rectangle {
     private double dy;
     private List<Rectangle> ostacoli;
     public static boolean firstMove = false;
+    boolean realFistMove=false;
 
     public Ghost(int x, int y, int width, int height, Color color, List<Rectangle> ostacoli) {
         super(width, height, color);
@@ -30,7 +31,7 @@ public class Ghost extends Rectangle {
 
     void move() {
         if (dx == 0 && dy == 0) {
-            if (firstMove) {
+            if (firstMove && realFistMove) {
                 int random = (int) (Math.random() * 4);
                 switch (random) {
                     case 0:
@@ -49,8 +50,27 @@ public class Ghost extends Rectangle {
                         dx = 0;
                         dy = -2;
                         break;
+                }
+            }else if(firstMove && !realFistMove){
+                int random = (int) (Math.random() * 3);
+                //mi muovo solo in altor, a destra e a sinistra
+                switch (random) {
+                    case 0:
+                        dx = 2;
+                        dy = 0;
+                        break;
+                    case 1:
+                        dx = -2;
+                        dy = 0;
+                        break;
+                    case 2:
+                        dx = 0;
+                        dy = -2;
+                        break;
+                }
+                realFistMove=true;
             }
-            }
+
         }else {
             double nextX = getX() + dx;
             double nextY = getY() + dy;
@@ -73,12 +93,23 @@ public class Ghost extends Rectangle {
                     nextX + getWidth() > ostacolo.getX() &&
                     nextY < ostacolo.getY() + ostacolo.getHeight() &&
                     nextY + getHeight() > ostacolo.getY()) {
-                System.out.println("Colliding");
+                //System.out.println("Colliding");
                 return true;
             }
         }
-        System.out.println("Not colliding");
+        //Se ghost collide con pacman il gioco finisce
+        if (nextX < GameController.pacman.getX() + GameController.pacman.getWidth() &&
+                nextX + getWidth() > GameController.pacman.getX() &&
+                nextY < GameController.pacman.getY() + GameController.pacman.getHeight() &&
+                nextY + getHeight() > GameController.pacman.getY()) {
+            GameOver();
+        }
+        //System.out.println("Not colliding");
         return false;
+    }
+
+    public void GameOver() {
+        System.exit(0);
     }
 
     public int getDx() {
