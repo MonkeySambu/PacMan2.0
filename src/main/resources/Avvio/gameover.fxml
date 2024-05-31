@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="390.0" prefWidth="620.0" stylesheets="@../Gioco/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Avvio.Avvio">
+   <children>
+      <Button fx:id="btnMenu" layoutX="149.0" layoutY="195.0" mnemonicParsing="false" onAction="#onActionReturn" prefHeight="76.0" prefWidth="325.0" styleClass="Button" text="Chiudi">
+         <font>
+            <Font name="Bauhaus 93" size="38.0" />
+         </font>
+      </Button>
+      <Label layoutX="119.0" layoutY="14.0" text="Game-Over">
+         <font>
+            <Font name="Bauhaus 93" size="80.0" />
+         </font>
+      </Label>
+      <Label fx:id="Score" layoutX="108.0" layoutY="106.0" prefHeight="29.0" prefWidth="408.0" text="Score salvato, controlla in Classifica">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

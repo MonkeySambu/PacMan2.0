@@ -1,5 +1,6 @@
 package Gioco;
 
+import Avvio.Avvio;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
@@ -445,11 +446,10 @@ public class GameController {
                 score.setText("Score: " + String.format("%04d", (140-monete.size())*10));
                 punteggio.setScore(String.format("%04d", (140-monete.size())*10));
                 if (monete.isEmpty()) {
-                    PacManGame.WinScene();
+                    Avvio.win = true;
+                    //fermo tutti
+                    stopThreads();
                 }
-                punteggio.setScore(((141 - monete.size()-1)*10));
-                //Aggiorno il label
-                System.out.println(punteggio.getScore());
                 score.setFont(customFont);
                 score.setTextAlignment(TextAlignment.CENTER);
                 score.setText(punteggio.getScore());

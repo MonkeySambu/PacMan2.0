@@ -41,46 +41,6 @@ public class PacManGame extends Application {
         scene.getRoot().requestFocus();
     }
 
-    public static void GameOverScene() {
-        if(!gameOver) {
-            System.out.println("Hai perso!");
-            FXMLLoader loader = new FXMLLoader(PacManGame.class.getResource("gameover.fxml"));
-            try {
-                Parent root = loader.load();
-                Scene scene = new Scene(root, 610, 390);
-                Stage stage = new Stage();
-                stage.setTitle("Hai perso!");
-                stage.setScene(scene);
-                stage.setResizable(false);
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            gameOver = true;
-            stageTMP.hide();
-        }
-    }
-
-    public static void WinScene(){
-        if(!win) {
-            System.out.println("Hai vinto!");
-            FXMLLoader loader = new FXMLLoader(PacManGame.class.getResource("win.fxml"));
-            try {
-                Parent root = loader.load();
-                Scene scene = new Scene(root, 1280, 720);
-                Stage stage = new Stage();
-                stage.setTitle("Hai vinto!");
-                stage.setScene(scene);
-                stage.setResizable(false);
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            win=true;
-            stageTMP.hide();
-        }
-    }
-
     public static void main(String[] args) {
         launch();
     }

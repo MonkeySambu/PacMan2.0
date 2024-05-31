@@ -1,5 +1,6 @@
 package Gioco;
 
+import Avvio.Avvio;
 import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -15,6 +16,7 @@ public class Ghost extends Rectangle {
     public static boolean firstMove = false;
     boolean realFistMove=false;
     private ImageView imageView;
+    public static boolean fermi = false;
 
     public Ghost(int x, int y, int width, int height, Color color, List<Rectangle> ostacoli,String imagePath) {
         super(width, height, color);
@@ -39,7 +41,7 @@ public class Ghost extends Rectangle {
     }
 
     void move() {
-        if (dx == 0 && dy == 0) {
+        if (dx == 0 && dy == 0 && !fermi) {
             if (firstMove && realFistMove) {
                 int random = (int) (Math.random() * 4);
                 switch (random) {
@@ -113,14 +115,32 @@ public class Ghost extends Rectangle {
                 nextX + getWidth() > GameController.pacman.getX() &&
                 nextY < GameController.pacman.getY() + GameController.pacman.getHeight() &&
                 nextY + getHeight() > GameController.pacman.getY()) {
-            GameOver();
+            //fermo tutti
+            GameController.pacman.stop();
+            GameController.fantasmi.forEach(Ghost::OnlyStop);
+            //sposto tutti alle loro posizioni originali
+GameController.pacman.setX(602);
+GameController.pacman.setY(400);
+GameController.fantasmi.get(0).setX(602);
+GameController.fantasmi.get(0).setY(400);
+GameController.fantasmi.get(1).setX(602);
+GameController.fantasmi.get(1).setY(400);
+GameController.fantasmi.get(2).setX(602);
+GameController.fantasmi.get(2).setY(400);
+GameController.fantasmi.get(3).setX(602);
+GameController.fantasmi.get(3).setY(400);
+
+                Avvio.gameOver = true;
+
         }
         //System.out.println("Not colliding");
         return false;
     }
 
-    public void GameOver() {
-        PacManGame.GameOverScene();
+    private void OnlyStop() {
+        dx = 0;
+        dy = 0;
+        fermi = true;
     }
 
     public ImageView getImageView() {
