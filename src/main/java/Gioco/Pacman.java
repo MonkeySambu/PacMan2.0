@@ -4,6 +4,7 @@ import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
 
@@ -47,6 +48,7 @@ public class Pacman extends Rectangle {
     }
 
     private void move() {
+        GameController.searchMonete(this);
         double nextX = getX() + dx;
         double nextY = getY() + dy;
 
@@ -56,6 +58,7 @@ public class Pacman extends Rectangle {
             setX(nextX);
             setY(nextY);
         }
+
         imageView.setX(getX());
         imageView.setY(getY());
     }
@@ -66,22 +69,11 @@ public class Pacman extends Rectangle {
                     nextX + getWidth() > obstacle.getX() &&
                     nextY < obstacle.getY() + obstacle.getHeight() &&
                     nextY + getHeight() > obstacle.getY()) {
-                System.out.println("Colliding con " + obstacle);
+                //System.out.println("Colliding con " + obstacle);
                 return true;
             }
         }
-        //se collido in ogni direzione con un fantasma perdo
-        for (Ghost ghost : GameController.fantasmi) {
-            if (nextX < ghost.getX() + ghost.getWidth() &&
-                    nextX + getWidth() > ghost.getX() &&
-                    nextY < ghost.getY() + ghost.getHeight() &&
-                    nextY + getHeight() > ghost.getY()) {
-                System.out.println("Colliding con " + ghost);
-                System.out.println("Hai perso");
-                System.exit(0);
-            }
-        }
-        System.out.println("Not colliding");
+        //System.out.println("Not colliding");
         return false;
     }
 
