@@ -1,6 +1,8 @@
 package Gioco;
 
 import javafx.animation.AnimationTimer;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -12,13 +14,20 @@ public class Ghost extends Rectangle {
     private List<Rectangle> ostacoli;
     public static boolean firstMove = false;
     boolean realFistMove=false;
+    private ImageView imageView;
 
-    public Ghost(int x, int y, int width, int height, Color color, List<Rectangle> ostacoli) {
+    public Ghost(int x, int y, int width, int height, Color color, List<Rectangle> ostacoli,String imagePath) {
         super(width, height, color);
         setX(x);
         setY(y);
         dx = 0;
         dy = 0;
+
+        Image pacmanImage = new Image(getClass().getResourceAsStream(imagePath));
+        imageView = new ImageView(pacmanImage);
+        imageView.setFitWidth(width);
+        imageView.setFitHeight(height);
+
         this.ostacoli = ostacoli;
 
         new AnimationTimer() {
@@ -85,6 +94,8 @@ public class Ghost extends Rectangle {
                 dy = 0;
             }
         }
+        imageView.setX(getX());
+        imageView.setY(getY());
     }
 
     private boolean isColliding(double nextX, double nextY) {
@@ -110,6 +121,10 @@ public class Ghost extends Rectangle {
 
     public void GameOver() {
         PacManGame.GameOverScene();
+    }
+
+    public ImageView getImageView() {
+        return imageView;
     }
 
     public int getDx() {
