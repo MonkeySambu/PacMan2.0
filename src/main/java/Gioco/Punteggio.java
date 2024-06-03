@@ -1,6 +1,7 @@
 package Gioco;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Punteggio implements Serializable {
     private String punteggio;

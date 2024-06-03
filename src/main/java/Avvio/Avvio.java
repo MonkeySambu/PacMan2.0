@@ -3,6 +3,7 @@ package Avvio;
 import Classifica.GraficaClassifica;
 import Crediti.GraficaCrediti;
 import Gioco.GameController;
+import Gioco.ListPunteggi;
 import Gioco.PacManGame;
 import Menu.GraficaMenu;
 import javafx.animation.AnimationTimer;
@@ -18,7 +19,9 @@ import javafx.scene.control.Menu;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
+
+import static Gioco.GameController.punteggio;
 
 
 public class Avvio extends Application{
@@ -99,15 +102,58 @@ public class Avvio extends Application{
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        ListPunteggi ls = new ListPunteggi();
+        //se il file esiste lo leggo
+        File file = new File("Dati.dat");
+        if (file.exists()&&file.length()!=0) {
+            try {
+                FileInputStream fileIn = new FileInputStream(file);
+                ObjectInputStream objStr = new ObjectInputStream(fileIn);
+                ls = (ListPunteggi) objStr.readObject();
+                objStr.close();
+                fileIn.close();
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        ls.addHead(punteggio);
+        try {
+            FileOutputStream fileOut = new FileOutputStream(file);
+            ObjectOutputStream objStr = new ObjectOutputStream(fileOut);
+            objStr.writeObject(ls);
+            objStr.close();
+            fileOut.close();
+        } catch (FileNotFoundException e) {
+            //se non trovo il file lo creo
+            try {
+                file.createNewFile();
+                FileOutputStream fileOut = new FileOutputStream(file);
+                ObjectOutputStream objStr = new ObjectOutputStream(fileOut);
+                objStr.writeObject(ls);
+                objStr.close();
+                fileOut.close();
+            } catch (FileNotFoundException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void WinScene(){
         gioco.close();
             System.out.println("Hai vinto!");
-            FXMLLoader loader = new FXMLLoader(PacManGame.class.getResource("win.fxml"));
+            FXMLLoader loader = new FXMLLoader(Avvio.class.getResource("win.fxml"));
             try {
                 Parent root = loader.load();
-                Scene scene = new Scene(root, 1280, 720);
+                Scene scene = new Scene(root, 610, 390);
                 Stage stage = new Stage();
                 stage.setTitle("Hai vinto!");
                 stage.setScene(scene);
@@ -116,9 +162,56 @@ public class Avvio extends Application{
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        ListPunteggi ls = new ListPunteggi();
+        //se il file esiste lo leggo
+        File file = new File("Dati.dat");
+        if (file.exists()&&file.length()!=0) {
+            try {
+                FileInputStream fileIn = new FileInputStream(file);
+                ObjectInputStream objStr = new ObjectInputStream(fileIn);
+                ls = (ListPunteggi) objStr.readObject();
+                objStr.close();
+                fileIn.close();
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        ls.addHead(punteggio);
+        try {
+            FileOutputStream fileOut = new FileOutputStream(file);
+            ObjectOutputStream objStr = new ObjectOutputStream(fileOut);
+            objStr.writeObject(ls);
+            objStr.close();
+            fileOut.close();
+        } catch (FileNotFoundException e) {
+            //se non trovo il file lo creo
+            try {
+                file.createNewFile();
+                FileOutputStream fileOut = new FileOutputStream(file);
+                ObjectOutputStream objStr = new ObjectOutputStream(fileOut);
+                objStr.writeObject(ls);
+                objStr.close();
+                fileOut.close();
+            } catch (FileNotFoundException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void onActionReturn(ActionEvent actionEvent) {
+        System.exit(0);
+    }
+
+    public void onActionCloseWin(ActionEvent actionEvent) {
         System.exit(0);
     }
 }

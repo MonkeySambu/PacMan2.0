@@ -11,14 +11,9 @@
             <Font name="Bauhaus 93" size="38.0" />
          </font>
       </Button>
-      <Label layoutX="119.0" layoutY="14.0" text="Game-Over">
+      <Label layoutX="119.0" layoutY="51.0" text="Game-Over">
          <font>
             <Font name="Bauhaus 93" size="80.0" />
-         </font>
-      </Label>
-      <Label fx:id="Score" layoutX="108.0" layoutY="106.0" prefHeight="29.0" prefWidth="408.0" text="Score salvato, controlla in Classifica">
-         <font>
-            <Font name="Bauhaus 93" size="25.0" />
          </font>
       </Label>
    </children>

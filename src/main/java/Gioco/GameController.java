@@ -1,6 +1,7 @@
 package Gioco;
 
 import Avvio.Avvio;
+import Classifica.GraficaClassifica;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
@@ -11,6 +12,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 
+import java.io.*;
 import java.security.cert.PolicyNode;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,13 +1,17 @@
 package Gioco;
 
 import Avvio.Avvio;
+import Classifica.GraficaClassifica;
 import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+import java.io.*;
 import java.util.List;
+
+import static Gioco.GameController.punteggio;
 
 public class Ghost extends Rectangle {
     private double dx;
@@ -129,7 +133,6 @@ GameController.fantasmi.get(2).setX(602);
 GameController.fantasmi.get(2).setY(400);
 GameController.fantasmi.get(3).setX(602);
 GameController.fantasmi.get(3).setY(400);
-
                 Avvio.gameOver = true;
 
         }
