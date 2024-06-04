@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Avvio.Avvio">
    <children>
-      <Text fill="GOLD" layoutX="299.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classifica" textAlignment="CENTER" wrappingWidth="391.40000915527344">
+      <Text fill="GOLD" layoutX="299.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crediti" textAlignment="CENTER" wrappingWidth="391.40000915527344">
          <font>
              <Font size="85.0" />
          </font></Text>
