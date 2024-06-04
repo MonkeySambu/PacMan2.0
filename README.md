@@ -12,10 +12,9 @@ Un Remake di "Pacman" in java come progetto scolastico
 
 ## Cose che vanno
 - Gioca
-
-## Cose che non vanno
 - Classifica
 - Crediti
+
+## Cose che non vanno
 - Rigica
 - Torna a menu
-- Altro...
